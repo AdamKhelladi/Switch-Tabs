@@ -1,0 +1,98 @@
+/* Start Global Rules  */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+/* End Global Rules  */
+
+.content-area {
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.content-area .title {
+  margin-bottom: 15px;
+}
+
+.content-area .title h2 {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.content-area .header {
+  display: flex;
+  align-items: center;
+}
+
+.content-area .header div {
+  border: 1px solid #ccc;
+  border-bottom: none;
+  padding: 10px;
+  background-color: #eee;
+  color: rgb(0, 102, 255);
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.content-area .header div:not(.active):hover {
+  background-color: #dadada;
+}
+
+.content-area .header .first {
+  border-right: none;
+}
+
+.content-area .header .third {
+  border-left: none;
+}
+
+.content-area .header .active {
+  border-top: none;
+  position: relative;
+  background-color: white;
+}
+
+.content-area .header .active::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 102%;
+  height: 3px;
+  background-color: rgb(0, 102, 255);
+}
+
+.content-area .header .active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+.content-area .content {
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+.content-area .content p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #555;
+  line-height: 1.5;
+}
